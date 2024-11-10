@@ -4,7 +4,7 @@
 - 💞️ I’m looking to collaborate on banks or companys
 - 📫 How to reach me? Try send me a e-mail.
 - 😄 Pronouns: he/him
-- ⚡ Fun fact: i'm not there.
+- ⚡ Fun fact: i'm not here.
 
 <!---
 Chevante/Chevante is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.

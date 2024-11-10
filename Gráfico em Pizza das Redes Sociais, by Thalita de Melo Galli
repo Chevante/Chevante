@@ -1,0 +1,114 @@
+// Usando o aplicativo https://jsfiddle.net para rodar o código:
+
+
+// Primeiro passo, coloque os seguintes códigos de js (JavaScript) na área de JavaScript.
+
+
+// Dados iniciais do gráfico
+const initialData = {
+  labels: ['Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'Snapchat'],
+  datasets: [{
+    label: 'Redes Sociais',
+    data: [55, 30, 10, 5, 25],
+    backgroundColor: ['#3b5998', '#E4405F', '#1DA1F2', '#0077b5', '#FFFC00'],
+    hoverOffset: 4
+  }]
+};
+
+// Criação do gráfico de pizza
+const ctx = document.getElementById('myPieChart').getContext('2d');
+const myPieChart = new Chart(ctx, {
+  type: 'pie',
+  data: initialData,
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        labels: {
+          font: {
+            size: 18
+          },
+          color: 'red'
+        }
+      },
+      tooltip: {
+        callbacks: {
+          label: function(tooltipItem) {
+            return tooltipItem.label + ': ' + tooltipItem.raw + '%';
+          }
+        }
+      }
+    }
+  }
+});
+
+
+// Segundo passo, coloque o seguinte código na área de HTML:
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gráfico de Pizza com Créditos</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+    canvas {
+      margin-bottom: 20px;
+    }
+    #credits {
+      font-size: 16px;
+      color: black;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myPieChart" width="400" height="400"></canvas>
+  <div id="credits">Créditos: Thalita de Melo Galli</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+// Terceiro passo, coloque o seguinte código na área do CSS:
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+// Pronto, gráfico em pizza feito com sucesso. Obrigado a todos e até mais.
+
+// Made by Thalita de Melo Galli
